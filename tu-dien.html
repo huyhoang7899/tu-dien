@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" id ="text">
+    <input type="button" value="Translate" onclick="tuDien()">
+</form>
+<script>
+    let english = ["red","black","yellow","white","blue", "green", "orange"];
+    let vietnames = ["đỏ","đen","vàng","trắng","xanh da trời", "xanh lá cây", "cam"];
+    let index = "";
+    function tuDien() {
+        for(let i = 0 ; i < english.length ; i++){
+            if(english[i] === document.getElementById("text").value){
+                index = i;
+            }
+        } document.getElementById('i').innerHTML+=vietnames[index] + "<br/>";
+        document.getElementById("text").value = "";
+    }
+</script>
+<p id="i"></p>
+</body>
+</html>
